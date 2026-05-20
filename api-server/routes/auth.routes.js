@@ -1,21 +1,12 @@
 import express from "express";
 
-import {
-  registerUser,
-} from "../controllers/auth.controller.js";
+import { loginUser, registerUser } from "../controllers/auth.controller.js";
 
-import {
-  registerValidation,
-  loginValidation
-} from "../validations/auth.validation.js";
+import { registerValidation, loginValidation } from "../validations/auth.validation.js";
 
-import {
-  authenticate,
-} from "../middlewares/auth.middleware.js";
+import { authenticate } from "../middlewares/auth.middleware.js";
 
-import {
-  validate,
-} from "../middlewares/validate.middleware.js";
+import { validate } from "../middlewares/validate.middleware.js";
 
 const router = express.Router();
 

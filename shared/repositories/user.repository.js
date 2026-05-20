@@ -14,11 +14,7 @@ export const findUserByEmail = async (email) => {
   return result.rows[0];
 };
 
-export const createUser = async ({
-  username,
-  email,
-  passwordHash,
-}) => {
+export const createUser = async ({ username, email, passwordHash }) => {
   const query = `
     INSERT INTO users (
       username,

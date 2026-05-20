@@ -6,8 +6,7 @@ import {
 export const registerUser = async ( req, res ) => {
   try {
 
-    const result =
-      await registerUserService(req.body);
+    const result = await registerUserService(req.body);
 
     res.status(201).json({
       success: true,
@@ -25,10 +24,7 @@ export const registerUser = async ( req, res ) => {
   }
 };
 
-export const loginUser = async (
-  req,
-  res
-) => {
+export const loginUser = async ( req, res ) => {
   try {
 
     const result =
