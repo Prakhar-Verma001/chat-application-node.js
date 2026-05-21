@@ -2,3 +2,4 @@
 \i database/schema/rooms.sql
 \i database/schema/room-members.sql
 \i database/schema/messages.sql
+\i database/schema/indexes.sql

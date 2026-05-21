@@ -6,7 +6,7 @@ export const saveMessageRepository = async ({ roomId, senderId, content }) => {
     INSERT INTO messages (
       room_id,
       sender_id,
-      content
+      message
     )
     VALUES ($1, $2, $3)
     RETURNING *
@@ -28,7 +28,7 @@ export const getLatestMessagesRepository = async (roomId) => {
   const query = `
     SELECT
       m.id,
-      m.content,
+      m.message AS content,
       m.created_at,
 
       u.id AS sender_id,
